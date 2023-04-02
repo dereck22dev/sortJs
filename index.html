@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--dereck@22  06/10/22-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sortJs</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#"><h1>SortJs</h1></a>
+      <nav>
+        <ul>
+          <li>
+            <a href="#desc">description</a>
+          </li>
+          <li>
+            <a href="#usage">usage</a>
+          </li>
+          <li>
+            <a href="#demo">demo</a>
+          </li>
+          <li>
+            <a href="#view">view</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <a href="#desc"><h2>Description</h2></a>
+        <div>
+          <p>
+            SortJs est une mini librairie vous permettant de faire un trie
+            basique en manipulant le DOM et en exploitant la puissance du data-*
+            attribute.
+          </p>
+          <p>
+            L'idée de l'écrire m'est venu lorsque j'étais confronté à faire un
+            trie lors de l'intégration d'une maquette statique en bootcamp et
+            qu'il fallait importer un plugin qui étant "lourd" ne nous étais pas
+            bénéfique en matière de perfomance, j'espère qu'il sera utile et
+            qu'il se paufinera au fil du temps :)
+          </p>
+        </div>
+      </section>
+      <section>
+        <a href="#usage"><h2>Comment utiliser?</h2></a>
+
+        <div>
+          <h3>1. Copier le cdn ou le code</h3>
+          <p class="code">
+            export function sort(t,l){t.forEach(t=>{t.onclick=()=>{let
+            a=t.dataset.role;setTimeout(()=>{for(let t of
+            l){t.style.display="initial";t.dataset.list.match(a)||(t.style.display="none")}},500)}})}
+          </p>
+        </div>
+        <div>
+          <h3>2. Ajoutez-le à votre site web</h3>
+          <p>
+            selon la méthode choisie, vous pouvez l'ajouter de plusieurs façon:
+          </p>
+        </div>
+        <div>
+          <h3>3. Appliquez-le à votre code</h3>
+          <ol>
+            <li>
+              Ajoutez un attribut <code>data-role</code> à votre bouton de trie
+              et donnez lui une valeur;
+            </li>
+            <li>
+              Ajoutez un attribut <code>data-list</code> et comme valeur la
+              valeur du <code>data-role</code> définis à tout les éléments qui
+              seront révélé au clic sur le bouton trie;
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <a href="#demo"><h2>Demo</h2></a>
+        <div>
+          <script src="https://gist.github.com/Amour22/316acb29e79fb473ee6df293b5ed5e77.js"></script>
+        </div>
+      </section>
+      <section>
+        <a href="#view"><h2>Résultat</h2></a>
+        <ul>
+          <li class="componentsButton" data-role="all">ALL</li>
+          <li class="componentsButton" data-role="fish">FISH</li>
+          <li class="componentsButton" data-role="meat">MEAT</li>
+          <li class="componentsButton" data-role="vegan">VEGAN</li>
+        </ul>
+        <div class="componentsContainer">
+          <div class="component" data-list="all vegan">vegan</div>
+          <div class="component" data-list="all fish">fish</div>
+          <div class="component" data-list="all meat">meat</div>
+          <div class="component" data-list="all fish">fish</div>
+          <div class="component" data-list="all vegan">vegan</div>
+          <div class="component" data-list="all meat">meat</div>
+          <div class="component" data-list="all vegan">vegan</div>
+          <div class="component" data-list="all fish">fish</div>
+          <div class="component" data-list="all vegan">vegan</div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>
+        @copyright <span id="year"></span>
+        <a href="http://github.com/Amour22">Dereck22</a>
+      </p>
+    </footer>
+    <script
+      src="./js/index.js"
+      crossorigin="use-credentials"
+      type="module"
+    ></script>
+  </body>
+</html>
