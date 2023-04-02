@@ -1,4 +1,4 @@
-import('./modules/sortJs.mjs').then((Module)=>{
+import('./modules/sortJs.min.mjs').then((Module)=>{
     /**
      * Initialisation des variables avec les composants
      * */

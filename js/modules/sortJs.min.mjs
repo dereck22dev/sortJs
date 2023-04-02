@@ -1,0 +1,1 @@
+export function sort(t,l){t.forEach(t=>{t.onclick=()=>{let a=t.dataset.role;setTimeout(()=>{for(let t of l){t.style.display="initial";t.dataset.list.match(a)||(t.style.display="none")}},500)}})}
